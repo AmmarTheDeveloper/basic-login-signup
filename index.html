@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- own css link -->
+    <link rel="stylesheet" href="login.css">
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+       <form action="">
+        <div class="login">
+            <div class="heading">
+                <h2>Login</h2>
+            </div>
+            <div class="name">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="password">
+                <div class="login-password">
+                    <input type="password" placeholder="Password" class="password-input">
+                <i class="fa-solid fa-eye-slash eye hide"></i>
+                <i class="fa-solid fa-eye eye show"></i>
+                </div>
+            </div>
+            <div class="forget">
+                <a href="#">Forget password?</a>
+            </div>
+            <div class="login-btn">
+                <input type="submit" value="Login">
+            </div>
+            <div class="signup">
+                <p>Don't have an account? <a href="signup.html">Signup</a></p>
+            </div>
+            <div class="divider"></div>
+            <div class="facebook">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <input type="button" value="Login with  Facebook"></a>
+            </div>
+            <div class="google">
+               <a href="#">
+                <img src="images/google.png" alt="error">
+                <input type="button" value="Login  with  Google">
+               </a>
+            </div>
+        </div>
+       </form>
+    </div>
+    <script>
+        const eyeShow = document.querySelector('.eye.show');
+        const eyeHide = document.querySelector('.eye.hide');
+        const PasswordInput = document.querySelector('.password input');
+        eyeHide.onclick = ()=>{
+            PasswordInput.type = 'text';
+            eyeHide.classList.add('active');
+            eyeShow.classList.add('active');
+        }
+        eyeShow.onclick = ()=>{
+            PasswordInput.type = 'password';
+            eyeHide.classList.remove('active');
+            eyeShow.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family:Poppins , sans-serif;
+    text-decoration:none;
+}
+body{
+    margin:0;
+    padding:0;
+}
+div{
+    width:100%;
+    height:fit-content;
+}
+.container{
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container form{
+    width:fit-content;
+}
+.container .login{
+    text-align:center;
+    padding:20px 25px;
+    border-radius:5px;
+    width:450px;
+    box-shadow:0px 4px 14px rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-sizing:border-box;
+}
+.container input{
+    height:50px;
+    border-radius:5px;
+    outline:none;
+    border:1px solid  grey;
+    padding:0 10px;
+    margin:10px 0;
+    box-sizing:border-box;
+    font-size:15px;
+    width:100%;
+}
+.container .forget a{
+    color:blue;
+    margin:3px 0;
+    transition:all 0.3s ease;
+}
+.container .forget a:hover{
+    text-decoration:underline;
+}
+.container .login-btn input{
+    background:blue;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+.container .login-btn input:hover{
+    background:darkblue;
+}
+.container .signup a{
+    color:blue;
+    transition:all 0.3s ease;
+}
+.container .signup a:hover{
+    text-decoration:underline;
+}
+.container .divider{
+    margin:5px 0 15px 0;
+    background:grey;
+    height:0.5px;
+    width:100%;
+    position:relative;
+}
+.container .divider:after{
+    content:'or';
+    position:absolute;
+    left:45%;
+    top:-20px;
+    font-size:20px;
+    background:white;
+    padding:5px;
+}
+.container .facebook input{
+    background:darkblue;
+    color:white;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+.container .facebook input:hover{
+    background:rgb(2, 2, 185);
+}
+.container .facebook a{
+    position:relative;
+}
+.container .facebook i{
+    position:absolute;
+    left:20px;
+    color:blue;
+    background:white;
+    padding:7px 10px;
+    border-radius:50%;
+    top:-5px;
+}
+.container .google input{
+    cursor:pointer;
+}
+.container .google input:hover{
+    background:rgba(0,0,0,0.1);
+}
+.container .google a{
+    position:relative;
+}
+.container .google a img{
+    position:absolute;
+    left:10px;
+    top:-10px;
+    height:40px;
+    width:40px;
+}
+/* //////////password eye button */
+.container .password .confirm-password , .container .password .login-password{
+    position:relative;
+}
+.container .password .eye{
+    position:absolute;
+    right:20px;
+    cursor:pointer;
+    top:25px;
+    color:rgba(0,0,0,0.7);
+}
+.container .password .eye.show{
+    display:none;
+}
+.container .password .eye.hide.active{
+    display:none;
+}
+.container .password .eye.show.active{
+    display:block;
+}
+@media screen and (max-width:480px){
+     .container form {
+        width:95%;
+    }
+    .container form .login{
+        width:100%;
+    }
+}
